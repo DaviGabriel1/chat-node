@@ -17,6 +17,7 @@ const ToughtsController = require("./controllers/ToughtsController")
 
 //import routes
 const toughtsRoutes = require("./routes/toughtsRoutes")
+const authRoutes = require("./routes/authRoutes")
 
 //template engine
 app.engine("handlebars",engine())
@@ -67,8 +68,9 @@ app.use((req,res,next) => {
 
 //routes
 app.use("/toughts",toughtsRoutes)
-
+app.use("/",authRoutes)
 app.get("/",ToughtsController.showToughts)
+
 
 //{force:true}
 conn.sync().then(() => {
