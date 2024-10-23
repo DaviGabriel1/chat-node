@@ -1,1 +1,15 @@
-<h1>Login</h1>
+<div class="auth-container">
+    <h2>Entrar</h2>
+    <form action="/login" method="post">
+        <div class="form-control">
+            <label for="email">E-mail:</label>
+            <input type="text" name="email" placeholder="digite o seu e-mail">
+        </div>
+        <div class="form-control">
+            <label for="password">Senha:</label>
+            <input type="password" name="password" placeholder="digite a sua senha">
+        </div>
+        <input type="submit" value="Entrar">
+        <p>não tem uma conta? <a href="/register">clique aqui!</a></p>
+    </form>
+</div>
